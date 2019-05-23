@@ -1,0 +1,15 @@
+<%= form_for @appearance do |f| %>
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.number_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :country_id %><br />
+    <%= f.collection_select :guest_id, Guest.order(:name), :id, :name, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :state_id, "State or Province" %><br />
+    <%= f.collection_select :episode_id, Episode.order(:name), :id, :number, include_blank: true %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>

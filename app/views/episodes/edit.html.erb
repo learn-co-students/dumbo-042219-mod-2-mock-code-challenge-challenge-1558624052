@@ -1,0 +1,11 @@
+
+<%= form_for(@episode) do |f| %>
+  <p>
+    <%= f.number_field :number %><br />
+    <%= f.date_field :date %><br />
+
+  </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
