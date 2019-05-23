@@ -14,7 +14,7 @@ class AppearancesController < ApplicationController
 
 	def create
 		@appearance = Appearance.create(app_params)
-		render episode_path(@episode)
+		redirect_to episode_path(@appearance.episode)
 	end
 
 	def edit

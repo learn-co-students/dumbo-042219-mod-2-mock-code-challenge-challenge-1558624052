@@ -1,8 +1,6 @@
  <h1>Episode Number: <%= @episode.number %></h1><br>
  <h2>Episode Date: <%= @episode.date %></h2><br>
- <h3>Episode Guests: 
- 	<% @appearances.each do |app| %>
- 		<% if app.episode_id == params[:id] %>
- 			<%= app.guest.name %>
- 		<% end %>
- 	<% end %></h3><br> 
+ <h3>Episode Guests: <% @episode.guests.each do |guest|%>
+ 	<%= guest.name %><br>
+ 	<% end %>
+ </h3><br> 
