@@ -1,0 +1,13 @@
+<%= form_for(@guest) do |f| %>
+  <p>
+    <%= f.text_field :name %><br />
+    <%= f.text_field :occupation %><br />
+    <%# <% for episode in Episode.all %>
+      <%#= check_box_tag "guest[episode_ids][]", episode.id, @guest.episodes.include?(episode) %>
+      <%#=h city.name %><br />
+    <%# end %> %>
+  </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
